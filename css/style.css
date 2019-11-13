@@ -1,3 +1,11 @@
+/*
+Theme Name: WordPressResponsivetTemaByHonamiTanabe
+Theme URI: http://wordpress.org/themes/BlogThema
+Author: Honami Tanabe
+Template: twentyseventeen //親テーマのディレクトリ名
+Description: Original Thema
+Version: 1.0
+*/
 @charset "utf-8";
 html {
   overflow-y: scroll;

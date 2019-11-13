@@ -1,9 +1,9 @@
-$(function() {
+$(function () {
   //HTMLが読み込まれたときに実行する処理
   $url =
     "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628?format=json&applicationId=1032286552896890164";
 
-  $.getJSON($url, function(json) {
+  $.getJSON($url, function (json) {
     $(".swiper-container").html("");
 
     var dtl = "";
