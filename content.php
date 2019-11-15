@@ -25,6 +25,7 @@
             <!-- </span> -->
         </div>
     </div>
+    <!-- thumbの分岐を作成 -->
     <div class="article__thumb">
         <?php the_post_thumbnail(array(200, 200)); ?>
     </div>

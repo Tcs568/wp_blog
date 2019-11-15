@@ -3,8 +3,6 @@ Theme Name: OriginalThema
 Author: Honami Tanabe
 Description: WordPressOriginalThema
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 @charset "utf-8";
 html {
@@ -262,4 +260,4 @@ img {
   .content {
     margin-top: 8px;
   }
-}ß
+}

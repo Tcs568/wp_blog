@@ -12,10 +12,12 @@
                 <div class="footer__content">
                   <ul class="footer__nav">
                     <li class="footer__list">
-                      <a class="list__link" href="">お問い合わせ</a>
+                      <a class="list__link" href="get_page_link($contact)">お問い合わせ</a>
                     </li>
                   </ul>
-                  <small class="footer__copy">©2019 商品.com</small>
+                  <small class="footer__copy">Copyright ©
+                    <?php bloginfo('name'); ?>
+                    All Rights Reserved.</small>
                 </div>
               </div><!-- end footer inner -->
             </footer>
