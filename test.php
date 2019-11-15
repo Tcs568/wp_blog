@@ -46,10 +46,10 @@
         </header>
         <!-- top -->
         <div id="top">
+            <!-- end header php -->
             <div class="top__inner">
                 <div id="contents">
                     <div class="container">
-                        <!-- end php header -->
                         <!-- Slider main container -->
                         <div class="item-container  swiper-container mb60"></div>
                     </div>
