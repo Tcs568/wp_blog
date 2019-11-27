@@ -17,8 +17,8 @@
                     endif;
 
                     the_post_navigation(array(
-                        'prev_text' => '&lt;&lt; %title',
-                        'next_text' => '%title &gt;&gt;',
+                        'prev_text' => '&lt; %title',
+                        'next_text' => '%title &gt;',
                     ));
 
                 endwhile;

@@ -5,6 +5,7 @@
                          <aside id="sidebar">
                              <div class="sidebar__inner">
                                  <?php dynamic_sidebar('sidebar-1'); ?>
+                                 <?php get_search_form(); ?>
                              </div><!-- end sidebar inner -->
                          </aside><!-- end sidebar -->
                      </div><!-- end sidebar col -->

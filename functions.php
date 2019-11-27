@@ -49,29 +49,36 @@ function theme_widgets_init()
         'name'          => 'サイドバー',
         'id'            => 'sidebar-1',
         'description'   => 'サイドバーに表示されるウィジェット',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ));
-    register_sidebar(array(
-        'name'          => 'フッター1',
-        'id'            => 'footer-1',
-        'description'   => 'フッターに表示されるウィジェット',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ));
-
-    register_sidebar(array(
-        'name'          => 'フッター2',
-        'id'            => 'footer-2',
-        'description'   => 'フッターに表示されるウィジェット',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => ' <div class="sidebar__box">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="sidebar__head"><span>',
+        'after_title'   => '</span></div>',
     ));
 }
 add_action('widgets_init', 'theme_widgets_init');
+
+function custom_the_posts_pagination($template)
+{
+    $template = '
+	<nav class="p-posts-pagination %1$s" role="navigation">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="post__nav">%3$s</div>
+	</nav>';
+    return $template;
+}
+add_filter('navigation_markup_template', 'custom_the_posts_pagination');
+
+function my_contact_enqueue_scripts()
+{
+    wp_deregister_script('contact-form-7');
+    wp_deregister_style('contact-form-7');
+    if (is_page('contact')) {
+        if (function_exists('wpcf7_enqueue_scripts')) {
+            wpcf7_enqueue_scripts();
+        }
+        if (function_exists('wpcf7_enqueue_styles')) {
+            wpcf7_enqueue_styles();
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'my_contact_enqueue_scripts');

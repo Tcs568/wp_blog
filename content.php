@@ -24,7 +24,7 @@
     </div>
     <div class="article__content">
         <?php
-        the_content();
+        the_content('続きを読む');
         ?>
     </div>
 </article>

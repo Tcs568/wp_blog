@@ -12,8 +12,8 @@
                             endwhile;
 
                             the_posts_pagination(array(
-                                'prev_text' => '&larr;',
-                                'next_text' => '&rarr;',
+                                'prev_text' => '&lt; %title',
+                                'next_text' => '%title &gt;',
                             ));
                         else :
                             echo '記事はありません。';

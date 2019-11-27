@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <!-- post -->
-<!-- post -->
 <div class="col-sm-12 col-lg-8">
     <main id="main">
         <section id="post">
@@ -10,11 +9,9 @@
                 <p class="error_url">URL ：<span><?php echo get_pagenum_link(); ?></span></p>
                 <p>現在表示する記事がありません。よろしければ、検索ボックスにお探しのコンテンツに該当するキーワードを入力して下さい。</p>
                 <?php get_search_form(); ?>
-                <!-- 検索フォームを表示 -->
-            </div>
-</div><!-- end post inner -->
-</section><!-- end post -->
-</main>
+            </div><!-- end post inner -->
+        </section><!-- end post -->
+    </main>
 </div><!-- end post col -->
-<?php get_sidebar() ?>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

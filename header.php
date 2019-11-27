@@ -30,7 +30,7 @@
                    <?php wp_nav_menu(array(
                         'theme_location'  => 'global',
                         'container_class' => 'menu-container',
-                        'menu_class'         => 'global__list',
+                        'menu_class'         => 'globalnav__list',
                       )); ?>
                  <?php endif; ?>
                </nav><!-- end globalnav -->

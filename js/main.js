@@ -1,3 +1,5 @@
+'use strict';
+
 jQuery(function ($) {
   //HTMLが読み込まれたときに実行する処理
   $url =

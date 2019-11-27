@@ -14,4 +14,3 @@
 </div><!-- end post col -->
 <?php get_sidebar(); ?>
 <?php get_footer();
-// end index.php
