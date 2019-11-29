@@ -1,17 +1,14 @@
 'use strict';
 
-jQuery(function ($) {
-  //HTMLが読み込まれたときに実行する処理
-  $url =
-    "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628?format=json&applicationId=1032286552896890164";
+jQuery(function () {
+  const url = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20170628?format=json&applicationId=1032286552896890164";
 
-  $.getJSON($url, function (json) {
-    $(".swiper-container").html("");
+  jQuery.getJSON(url, function (json) {
+    jQuery(".swiper-container").html("");
 
     var dtl = "";
     var j = -1;
     var i = 0;
-    //alert(json.Items.length);
 
     for (i = 0; i < json.Items.length; i++) {
       j++;
@@ -34,7 +31,7 @@ jQuery(function ($) {
     dtl += '<div class="swiper-button-prev"></div>';
     dtl += '<div class="swiper-button-next"></div>';
 
-    $(".swiper-container").html(dtl);
+    jQuery(".swiper-container").html(dtl);
     var mySwiper = new Swiper(".swiper-container", {
       loop: true,
       slidesPerView: 5,
